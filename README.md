@@ -30,15 +30,10 @@ ChatSphere is a modern, real-time chat application that offers secure and intera
 
 - **End-to-End Encryption**: Protects user data and ensures privacy.
 
-
-
 ---
 
 
-
 ## **Technological Stack**
-
-
 
 ### **Backend**
 
@@ -52,8 +47,6 @@ ChatSphere is a modern, real-time chat application that offers secure and intera
 
 - **Containerization**: Docker for consistent development and deployment environments
 
-
-
 ### **Frontend**
 
 - **Language**: TypeScript
@@ -64,15 +57,9 @@ ChatSphere is a modern, real-time chat application that offers secure and intera
 
 - **State Management**: Redux or Context API for efficient state handling
 
-
-
 ---
 
-
-
 ## **Project Setup**
-
-
 
 ### **Prerequisites**
 
@@ -84,29 +71,20 @@ Ensure you have the following installed:
 
 - Docker (optional for containerized setup)
 
-
-
 ---
-
-
 
 ### **Backend Setup**
 
 1. Clone the repository:
 
-   ```bash
-
+   ```
    git clone https://github.com/username/chatsphere.git
 
    cd chatsphere/backend
 
    ```
 
-
-
 2. Create a virtual environment and activate it:
-
-
 
 ```
 
@@ -118,111 +96,65 @@ venv\Scripts\activate     # For Windows
 
 ```
 
-
-
 3. Install dependencies:
 
 
-
 ```
-
 pip install -r requirements.txt
 
-
-
 ```
-
-
-
 4. Set up the database:
 
-
-
 ```
-
 python manage.py makemigrations
 
 python manage.py migrate
 
-
-
 ```
-
-
-
 5. Start the development server:
 
-
-
 ```
-
 python manage.py runserver
 
-
-
 ```
-
-
 
 ### **Frontend Setup** 
 
-
-
 1. Navigate to the frontend folder:
 
-
-
 ```
-
 cd ../frontend
 
 ```
-
-
-
 2. Install dependencies:
 
 ```
-
 npm install
 
 ```
 
-
-
 3. Start the development server:
 
 ``
-
 npm run dev
 
 ```
 
-
-
 4. Access the frontend on `http://localhost:5173`.
-
 
 
 ### **Run with Docker**
 
-
-
 1. Build and run the containers:
 
 ```
-
 docker-compose up --build
-
-
 
 ```
 
 
 
 Access the application:
-
-
 
 - Backend: `http://localhost:8000`
 
@@ -232,20 +164,13 @@ Access the application:
 
 
 
-### Folder Structure
-
-
+### **Folder Structure**
 
 ### Backend
 
-
-
 ```
 
-Copy code
-
 backend/
-
 ├── chatsphere/             # Core Django project settings
 
 ├── apps/                   # Custom apps (authentication, messaging, etc.)
@@ -257,23 +182,12 @@ backend/
 ├── requirements.txt        # Python dependencies
 
 └── manage.py               # Django management script
-
-
-
 ```
-
-
 
 ### Frontend
 
-
-
 ```
-
-Copy code
-
 frontend/
-
 ├── src/
 
 │   ├── components/         # Reusable UI components
@@ -291,8 +205,6 @@ frontend/
 ├── tsconfig.json           # TypeScript configuration
 
 └── vite.config.ts          # Vite configuration
-
-
 
 ```
 
