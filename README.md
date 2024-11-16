@@ -1,4 +1,4 @@
-# **ChatSphere: Real-Time Communication Platform**
+# **ChatMe: Real-Time Communication Platform**
 
 
 
@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-ChatSphere is a modern, real-time chat application that offers secure and interactive messaging for personal and group communication. Built with robust backend and frontend technologies, it delivers a seamless, scalable, and user-friendly experience.
+ChatMe is a modern, real-time chat application that offers secure and interactive messaging for personal and group communication. Built with robust backend and frontend technologies, it delivers a seamless, scalable, and user-friendly experience.
 
 
 
