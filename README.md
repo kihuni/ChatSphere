@@ -1,6 +1,6 @@
 # ChatMe: A Simple Real-Time Chat Application
 
-ChatMe is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and engage in private messaging with friends or colleagues.
+ChatMe is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and privately message friends or colleagues.
 
 ## Features
 - **User Authentication**:
@@ -17,8 +17,29 @@ ChatMe is a user-friendly chat application designed for seamless real-time commu
 
 ## Technologies Used
 ### Backend:
-- **Framework**: Django/Flask
-- **Database**: PostgreSQL/MongoDB
+- **Framework**: Django
+- **Database**: PostgreSQL
+- **WebSockets**: Django Channels# ChatMe: A Simple Real-Time Chat Application
+
+ChatMe is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and privately message friends or colleagues.
+
+## Features
+- **User Authentication**:
+  - Secure signup, login, and logout.
+  - Profile management.
+
+- **Room-Based Chat**:
+  - Create or join public/private chat rooms.
+  - Real-time messaging with persistent history.
+
+- **Private Messaging**:
+  - Direct, one-on-one conversations.
+  - Message read receipts and typing indicators.
+
+## Technologies Used
+### Backend:
+- **Framework**: Django
+- **Database**: PostgreSQL
 - **WebSockets**: Django Channels/Socket.IO
 
 ### Frontend:
@@ -37,3 +58,24 @@ ChatMe is a user-friendly chat application designed for seamless real-time commu
    ```bash
    git clone https://github.com/your-username/chatme.git
    cd chatme
+2. Set up the backend:
+   
+```
+cd backend
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+3. Set up the frontend:
+```
+cd frontend
+npm install
+npm start
+Access the app at http://localhost:3000.
+```
+
+Contributing
+Feel free to open issues or submit pull requests to enhance ChatMe. Contributions are always welcome!
