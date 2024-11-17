@@ -1,6 +1,5 @@
-# ChatMe: A Simple Real-Time Chat Application
-
-ChatMe is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and privately message friends or colleagues.
+# CollabSphere: Smart Collaboration Platform
+A versatile, team-focused communication tool designed for efficient collaboration in both professional and casual environments. The platform offers features such as:
 
 ## Features
 - **User Authentication**:
