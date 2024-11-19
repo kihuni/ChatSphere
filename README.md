@@ -18,9 +18,9 @@ A versatile, team-focused communication tool designed for efficient collaboratio
 ### Backend:
 - **Framework**: Django
 - **Database**: PostgreSQL
-- **WebSockets**: Django Channels# ChatMe: A Simple Real-Time Chat Application
+- **WebSockets**: Django Channels# CollabSphere: A Simple Real-Time Chat Application
 
-ChatMe is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and privately message friends or colleagues.
+CollabSphere is a user-friendly chat application designed for seamless real-time communication. Users can create or join chat rooms and privately message friends or colleagues.
 
 ## Features
 - **User Authentication**:
@@ -56,7 +56,7 @@ ChatMe is a user-friendly chat application designed for seamless real-time commu
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/chatme.git
-   cd chatme
+   cd CollabSphere
 2. Set up the backend:
    
 ```
