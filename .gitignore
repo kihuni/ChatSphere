@@ -2,6 +2,7 @@ env/
 env/bin/
 env/lib/
 .venv/
+.env
 
 
 # Bytecode files
