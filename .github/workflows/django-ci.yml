@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+  issues:
+    types:
+      - opened
 
 jobs:
   test:
@@ -44,13 +47,31 @@ jobs:
     - name: Run Migrations
       env:
         DATABASE_URL: postgres://django:django@localhost:5432/collabsphere
-        SECRET_KEY : ${{ secrets.DJANGO_SECRET_KEY }}
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       run: |
         python manage.py migrate
 
     - name: Run Tests
       env:
         DATABASE_URL: postgres://django:django@localhost:5432/collabsphere
-        SECRET_KEY : ${{ secrets.DJANGO_SECRET_KEY }}
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       run: |
         python manage.py test
+
+  handle-issue:
+    if: ${{ github.event_name == 'issues' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Log Issue Information
+      run: |
+        echo "A new issue has been created."
+        echo "Issue Title: ${{ github.event.issue.title }}"
+        echo "Issue URL: ${{ github.event.issue.html_url }}"
+        echo "Issue Body: ${{ github.event.issue.body }}"
+
+    - name: Add Default Labels
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: 'new, triage'
