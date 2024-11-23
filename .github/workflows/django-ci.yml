@@ -44,11 +44,13 @@ jobs:
     - name: Run Migrations
       env:
         DATABASE_URL: postgres://django:django@localhost:5432/collabsphere
+        SECRET_KEY : ${{ secrets.DJANGO_SECRET_KEY }}
       run: |
         python manage.py migrate
 
     - name: Run Tests
       env:
         DATABASE_URL: postgres://django:django@localhost:5432/collabsphere
+        SECRET_KEY : ${{ secrets.DJANGO_SECRET_KEY }}
       run: |
         python manage.py test
