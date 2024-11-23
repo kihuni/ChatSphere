@@ -44,8 +44,6 @@ INSTALLED_APPS = [
     "apps.users",
     "apps.chat",
     "apps.rooms",
-    "rest_framework_simplejwt",
-    "rest_framework_simplejwt.token_blacklist",
     ]
 
 MIDDLEWARE = [
