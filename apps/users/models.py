@@ -1,21 +1,38 @@
-from django.contrib.auth.models import AbstractUser
+# apps/users/models.py
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 class User(AbstractUser):
-    """
-    Custom user model for CollabSphere platform
-    """
-    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
-    bio = models.TextField(max_length=500, blank=True)
-    status = models.CharField(max_length=100, blank=True)
-    last_seen = models.DateTimeField(auto_now=True)
-    is_online = models.BooleanField(default=False)
     
-    class Meta:
-        db_table = 'auth_user'
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
+    bio = models.TextField(
+        max_length=500, 
+        blank=True, 
+        help_text='User\'s personal description'
+    )
+    avatar = models.ImageField(
+        upload_to='avatars/', 
+        null=True, 
+        blank=True
+    )
 
-    def __str__(self):
-        return self.username
+    # Contextual Information
+    location = models.CharField(max_length=100, blank=True)
+    gender = models.CharField(
+        max_length=1, 
+        choices=[
+            ('M', 'Male'), 
+            ('F', 'Female'), 
+            ('O', 'Other'), 
+            ('N', 'Prefer Not to Say')
+        ], 
+        blank=True
+    )
+
+    # Platform Engagement Metrics
+    joined_rooms_count = models.PositiveIntegerField(default=0)
+    messages_sent = models.PositiveIntegerField(default=0)
+
+    # Online Presence Tracking
+    is_online = models.BooleanField(default=False)
+    last_seen = models.DateTimeField(null=True, blank=True)

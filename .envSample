@@ -1,0 +1,13 @@
+# General Settings
+DEBUG=True
+SECRET_KEY= django-insecure-idomp&+5n&02#avnk-!o$6p$9@f--aj+7y$(a&t_4oper*_x47
+
+# Allowed Hosts (comma-separated)
+ALLOWED_HOSTS=127.0.0.1,localhost
+
+# Database Configuration
+DB_NAME=collabsphere
+DB_USER=""
+DB_PASSWORD=""
+DB_HOST=127.0.0.1
+DB_PORT=5432
